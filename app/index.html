@@ -75,17 +75,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <!-- Drawer Content -->
         <paper-menu class="list" attr-for-selected="data-route" selected="[[route]]">
           <a data-route="home" href="{{baseUrl}}">
-            <iron-icon icon="home"></iron-icon>
+            <iron-icon icon="icons:announcement"></iron-icon>
             <span>Item Filter Editor</span>
           </a>
 
           <a data-route="trades" href="{{baseUrl}}trades">
-            <iron-icon icon="info"></iron-icon>
+            <iron-icon icon="icons:add-shopping-cart"></iron-icon>
             <span>Stash Trades</span>
           </a>
 
           <a data-route="build" href="{{baseUrl}}build">
-            <iron-icon icon="mail"></iron-icon>
+            <iron-icon icon="icons:gavel"></iron-icon>
             <span>Building</span>
           </a>
         </paper-menu>
@@ -134,6 +134,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <paper-material elevation="1">
                 <h2 class="page-title">Trades</h2>
                 <p>This is the trades section</p>
+                <my-pstash-service></my-pstash-service> 
               </paper-material>
             </section>
 

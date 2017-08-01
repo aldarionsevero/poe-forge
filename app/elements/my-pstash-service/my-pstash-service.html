@@ -1,0 +1,37 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+ 
+<dom-module id="my-pstash-service">
+  <template>
+    <template is="dom-repeat" items="{{stashes}}">
+      <paper-material elevation="2">
+        <h3 class="page-title">{{item.stash}}</h3>
+      </paper-material>
+    </template>
+
+    <iron-ajax
+      id="requestTrades"
+      url="http://api.pathofexile.com/public-stash-tabs"
+      handle-as="json"
+      on-response="handleResponse">
+    </iron-ajax>
+  </template>
+
+  <script>
+   Polymer({
+     is: 'my-pstash-service',
+     properties: {
+       stashes: {
+         type: Array,
+         notify: true,
+       }
+     },
+     ready: function() {
+       this.$.requestTrades.generateRequest();
+     },
+     handleResponse: function(data) {
+       this.stashes = data.detail.response.stashes;
+     }
+   });
+  </script>
+</dom-module>
