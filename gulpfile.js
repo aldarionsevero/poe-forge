@@ -202,7 +202,7 @@ gulp.task('vulcanize', function() {
 // id that ensure that multiple PSK projects don't share the same Cache Storage.
 // This task does not run by default, but if you are interested in using service worker caching
 // in your project, please enable it within the 'default' task.
-// See https://github.com/PolymerElements/polymer-starter-kit#enable-service-worker-support
+// See https://github.com/PolymerElements/poe-forge#enable-service-worker-support
 // for more context.
 gulp.task('cache-config', function(callback) {
   var dir = dist();
@@ -319,7 +319,7 @@ gulp.task('deploy-gh-pages', function() {
     // Check if running task from Travis Cl, if so run using GH_TOKEN
     // otherwise run using ghPages defaults.
     .pipe($.if(process.env.TRAVIS === 'true', $.ghPages({
-      remoteUrl: 'https://$GH_TOKEN@github.com/polymerelements/polymer-starter-kit.git',
+      remoteUrl: 'https://$GH_TOKEN@github.com/polymerelements/poe-forge.git',
       silent: true,
       branch: 'gh-pages'
     }), $.ghPages()));

@@ -22,27 +22,57 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   /* Application theme */
 
   :root {
-    --dark-primary-color: #303F9F;
-    --default-primary-color: #3F51B5;
-    --light-primary-color: #C5CAE9;
-    --text-primary-color: #ffffff; /*text/icons*/
-    --accent-color: #FF4081;
-    --primary-background-color: #c5cae9;
-    --primary-text-color: #212121;
-    --secondary-text-color: #727272;
-    --disabled-text-color: #bdbdbd;
-    --divider-color: #B6B6B6;
-
-    /* Components */
-
-    /* paper-drawer-panel */
-    --drawer-menu-color: #ffffff;
-    --drawer-border-color: 1px solid #ccc;
-    --drawer-toolbar-border-color: 1px solid rgba(0, 0, 0, 0.22);
-
-    /* paper-menu */
-    --paper-menu-background-color: #fff;
-    --menu-link-color: #111111;
+    --default-primary-color: #e65540;
+    --dark-primary-color: #e65540;
+    --light-primary-color: #c5cae9;
+    --text-primary-color: #cec59f;
+    --accent-color: #ff4081;
+    --primary-background-color: #222222;
+    --background-color: #000000;
+    --primary-text-color: #cec59f;
+    --secondary-text-color: #cec59f;
+    --disabled-text-color: #424242;
+    --divider-color: #e0e0e0;
+    --paper-checkbox-checked-color: #000000;
+    --paper-checkbox-checked-ink-color: #e65540;
+    --paper-checkbox-unchecked-color: #cec59f;
+    --paper-checkbox-unchecked-ink-color: #636363;
+    --paper-checkbox-label-color: #cec59f;
+    --paper-fab-background: #e65540;
+    --paper-fab-disabled-background: #575757;
+    --paper-fab-disabled-text: #424242;
+    --paper-icon-button-disabled-text: #575757;
+    --paper-input-container-color: #636363;
+    --paper-input-container-focus-color: #e65540;
+    --paper-input-container-invalid-color: #ffb74d;
+    --paper-input-container-input-color: #636363;
+    --paper-menu-background-color: #222222;
+    --paper-menu-color: #cec59f;
+    --paper-menu-disabled-color: #575757;
+    --paper-progress-active-color: #000000;
+    --paper-progress-secondary-color: #3e4040;
+    --paper-radio-button-checked-color: #000000;
+    --paper-radio-button-checked-ink-color: #222222;
+    --paper-radio-button-unchecked-color: #cec59f;
+    --paper-radio-button-unchecked-ink-color: #636363;
+    --paper-radio-button-label-color: #cec59f;
+    --paper-slider-knob-color: #000000;
+    --paper-slider-active-color: #000000;
+    --paper-slider-pin-color: #000000;
+    --paper-spinner-layer-1-color: #000000;
+    --paper-spinner-layer-2-color: #000000;
+    --paper-spinner-layer-3-color: #000000;
+    --paper-spinner-layer-4-color: #000000;
+    --paper-tabs-selection-bar-color: #fff176;
+    --paper-tab-ink: #fff176;
+    --paper-toggle-button-checked-bar-color: #000000;
+    --paper-toggle-button-checked-button-color: #000000;
+    --paper-toggle-button-checked-ink-color: #000000;
+    --paper-toggle-button-unchecked-bar-color: #cec59f;
+    --paper-toggle-button-unchecked-button-color: #222222;
+    --paper-toggle-button-unchecked-ink-color: #222222;
+    --paper-toolbar-background: #222222;
+    --paper-toolbar-color: #cec59f;
   }
 
   /* General styles */
@@ -55,6 +85,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   paper-scroll-header-panel {
     height: 100%;
+    background: var(--background-color);
   }
 
   paper-material {
@@ -63,7 +94,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     padding: 16px 0 16px 0;
     width: calc(98.66% - 16px);
     margin: 16px auto;
-    background: white;
+    background: var(--paper-menu-background-color);
   }
 
   paper-menu iron-icon {
@@ -72,14 +103,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
 
   .paper-menu > .iron-selected {
-    color: var(--default-primary-color);
+    color: var(--paper-menu-color);
   }
 
   paper-menu a {
     @apply(--layout-horizontal);
     @apply(--layout-center);
     text-decoration: none;
-    color: var(--menu-link-color);
+    color: var(--paper-menu-color);
     font-family: 'Roboto', 'Noto', sans-serif;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;

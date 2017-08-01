@@ -3,8 +3,8 @@ A copy of [Polymer Starter Kit](https://github.com/PolymerElements/polymer-start
 
 ```bash
 # Clone
-$ git clone https://github.com/raphaelpor/electron-polymer-starter-kit
-$ cd electron-quick-start
+$ git clone https://github.com/aldarionsevero/poe-forge
+$ cd poe-forge
 
 # Install the dependencies and run
 $ npm install && bower install && npm start
