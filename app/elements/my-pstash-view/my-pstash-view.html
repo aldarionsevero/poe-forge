@@ -4,13 +4,12 @@
  
 <dom-module id="my-pstash-view">
   <template>
-    <div>
-        <my-pstash-service stashes={{stashes}}>
-        <\my-pstash-service>
-        <p>stashes</p>
-        <my-pstash-list stashes={{stashes}}>
-        <\my-pstash-list>
-    <\div>
+    <my-pstash-service stashes="{{stashes}}">
+    <\my-pstash-service>
+    <p>[[stashes]]<\p>
+    <!-- 
+    <my-pstash-list stashes="{{stashes}}">
+    <\my-pstash-list> -->
 
   </template>
 

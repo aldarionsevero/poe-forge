@@ -3,9 +3,12 @@
  
 <dom-module id="my-pstash-list">
   <template>
-    <template is="dom-repeat" as="stash" items="{{stashes}}">
-        <my-pstash-item stash={{stash}}><\my-pstash-item>
-    </template>
+    <p>test</p>
+    <ul>
+      <template is="dom-repeat" as="stash" items="{{stashes}}">
+          <my-pstash-item stash="{{stash}}"><\my-pstash-item>
+      </template>
+    <\ul>
   </template>
 
   <script>
