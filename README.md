@@ -8,6 +8,12 @@ $ cd poe-forge
 
 # Install the dependencies and run
 $ npm install && bower install && npm start
+# Ctrl-C to stop
+$ npm start # to run
+
+
+To serve as web app in the browser
+$ ./polymer-serve.sh
 ```
 
 ## Versions

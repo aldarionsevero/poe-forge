@@ -1,12 +1,12 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../my-pstash-item/my-pstash-item.html">
  
 <dom-module id="my-pstash-service">
   <template>
-    <template is="dom-repeat" items="{{stashes}}">
-      <paper-material elevation="4">
-        <h3 class="page-title">{{item.stash}}</h3>
-      </paper-material>
+    <template is="dom-repeat" as="stash" items="{{stashes}}">
+      <my-pstash-item stash="{{stash}}">
+      <\my-pstash-item>
     </template>
 
     <iron-ajax

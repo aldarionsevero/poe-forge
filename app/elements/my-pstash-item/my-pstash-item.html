@@ -1,0 +1,17 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-material/paper-material.html">
+
+<dom-module id="my-pstash-item">
+  <template>
+    <paper-material elevation="4">
+      <h3 class="page-title">{{stash.stash}}</h3>
+      <p>{{stash.accountName}}</p>
+    </paper-material>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'my-pstash-item',
+    });
+  </script>
+</dom-module>
