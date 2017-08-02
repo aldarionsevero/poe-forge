@@ -1,0 +1,22 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../my-pstash-service/my-pstash-service.html">
+<link rel="import" href="../my-pstash-list/my-pstash-list.html">
+ 
+<dom-module id="my-pstash-view">
+  <template>
+    <div>
+        <my-pstash-service stashes={{stashes}}>
+        <\my-pstash-service>
+        <p>stashes</p>
+        <my-pstash-list stashes={{stashes}}>
+        <\my-pstash-list>
+    <\div>
+
+  </template>
+
+  <script>
+    Polymer({
+      is: 'my-pstash-view',
+    });
+  </script>
+</dom-module>

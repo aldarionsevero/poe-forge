@@ -3,12 +3,6 @@
  
 <dom-module id="my-pstash-service">
   <template>
-    <template is="dom-repeat" items="{{stashes}}">
-      <paper-material elevation="4">
-        <h3 class="page-title">{{item.stash}}</h3>
-      </paper-material>
-    </template>
-
     <iron-ajax
       id="requestTrades"
       url="http://api.pathofexile.com/public-stash-tabs"
@@ -18,20 +12,20 @@
   </template>
 
   <script>
-   Polymer({
-     is: 'my-pstash-service',
-     properties: {
-       stashes: {
-         type: Array,
-         notify: true,
-       }
-     },
-     ready: function() {
-       this.$.requestTrades.generateRequest();
-     },
-     handleResponse: function(data) {
-       this.stashes = data.detail.response.stashes;
-     }
-   });
+    Polymer({
+      is: 'my-pstash-service',
+      properties: {
+        stashes: {
+          type: Array,
+          notify: true,
+        }
+      },
+      ready: function() {
+        this.$.requestTrades.generateRequest();
+      },
+      handleResponse: function(data) {
+        this.stashes = data.detail.response.stashes;
+      }
+    });
   </script>
 </dom-module>
