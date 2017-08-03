@@ -2,8 +2,12 @@
 
 # Please note that MONGO_HOST and MONGO_PORT could very well be left
 # out as they already default to a bare bones local 'mongod' instance.
-MONGO_HOST = 'localhost'
-MONGO_PORT = 27017
+from dotenv import load_dotenv, find_dotenv
+from os import environ
+load_dotenv(find_dotenv())
+
+MONGO_HOST = environ.get("MONGO_HOST")
+MONGO_PORT = int(environ.get("MONGO_PORT"))
 
 # Skip these if your db has no auth. But it really should.
 # MONGO_USERNAME = '<your username>'
@@ -13,7 +17,7 @@ XML = False
 JSON = True
 X_DOMAINS = '*'
 
-MONGO_DBNAME = 'forge'
+MONGO_DBNAME = environ.get("MONGO_DBNAME")
 CACHE_EXPIRES = 10
 PAGINATION_LIMIT = 1000
 PAGINATION_DEFAULT = 200
