@@ -16,6 +16,13 @@ To serve as web app in the browser
 $ ./polymer-serve.sh
 ```
 
+# Run the API locally
+
+```Bash
+$ pip install -r requeriments.txt
+$ python api.py
+```
+
 ## Versions
 - Polymer: 1.2.0
 - Polymer Starter Kit: 1.2.1
