@@ -10,9 +10,9 @@ MONGO_HOST = environ.get("MONGO_HOST")
 MONGO_PORT = int(environ.get("MONGO_PORT"))
 
 # Skip these if your db has no auth. But it really should.
-MONGO_USERNAME = environ.get("MONGO_USER")
-MONGO_PASSWORD = environ.get("MONGO_PASS")
-MONGO_AUTH_SOURCE = environ.get("MONGO_USER")
+# MONGO_USERNAME = environ.get("MONGO_USER")
+# MONGO_PASSWORD = environ.get("MONGO_PASS")
+# MONGO_AUTH_SOURCE = environ.get("MONGO_USER")
 
 XML = False
 JSON = True

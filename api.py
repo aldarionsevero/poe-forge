@@ -12,17 +12,16 @@ client = pymongo.MongoClient(
     socketTimeoutMS=200
 )
 db = client[environ.get("MONGO_DBNAME")]
-db.authenticate(
-    environ.get("MONGO_USER"),
-    environ.get("MONGO_PASS"),
-    source='admin')
+# db.authenticate(
+#     environ.get("MONGO_USER"),
+#     environ.get("MONGO_PASS"),
+#     source='admin')
 
 endpoints = ['stashes', 'items']
 
 for i in endpoints:
-
-if i not in db.collection_names():
-    db.create_collection(i)
+    if i not in db.collection_names():
+        db.create_collection(i)
 
 stash_collection = db['stashes']
 item_collection = db['items']
@@ -45,7 +44,7 @@ def updatedb():
         data = requests.get(url + '?id=' + next_change_id).json()
         next_change_id = data.get('next_change_id')
         page += 1
-        if page > 10:
+        if page > 3:
             break
     print('db updated')
 
@@ -59,5 +58,5 @@ class MyBasicAuth(BasicAuth):
 app = Eve(auth=MyBasicAuth)
 
 if __name__ == '__main__':
-    # updatedb()
+    updatedb()
     app.run()
