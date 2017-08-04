@@ -10,8 +10,9 @@ MONGO_HOST = environ.get("MONGO_HOST")
 MONGO_PORT = int(environ.get("MONGO_PORT"))
 
 # Skip these if your db has no auth. But it really should.
-# MONGO_USERNAME = '<your username>'
-# MONGO_PASSWORD = '<your password>'
+MONGO_USERNAME = environ.get("MONGO_USER")
+MONGO_PASSWORD = environ.get("MONGO_PASS")
+MONGO_AUTH_SOURCE = environ.get("MONGO_USER")
 
 XML = False
 JSON = True
@@ -60,17 +61,23 @@ forge_schema = {
 }
 
 
-forge = {
-    'additional_lookup': {
-        'url': 'regex("[\w]+")',
-        'field': 'accountName'
-    },
+stash = {
     'schema': forge_schema,
     # 'id_field': 'accountName'
     # 'url': 'stash'
 
 }
 
+item = {
+
+    'schema': forge_schema.get('items', {}).get('schema', {}),
+    # 'id_field': 'accountName'
+    # 'url': 'item'
+
+}
+
+
 DOMAIN = {
-    'stashes': forge,
+    'stashes': stash,
+    'items': item,
 }
