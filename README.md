@@ -12,24 +12,15 @@ $ npm install && bower install && npm start
 $ npm start # to run
 
 
-To serve as web app in the browser:
-
-Make a directory for global installations:
-
+#To serve as web app in the browser:
+#Make a directory for global installations:
 $ mkdir ~/.npm-global
-
-Configure npm to use the new directory path:
-
+#Configure npm to use the new directory path:
 $npm config set prefix '~/.npm-global'
-
-Open or create a ~/.bashrc file and add this line:
-
+#Open or create a ~/.bashrc file and add this line:
 export PATH=~/.npm-global/bin:$PATH
-
-Back on the command line, update your system variables:
-
+#Back on the command line, update your system variables:
 source ~/.bashrc
-
 Install polymer and bower globaly
 $ npm i -g bower polymer-cli
 $ ./polymer-serve.sh
