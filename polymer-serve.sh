@@ -1,3 +1,4 @@
+sed -i -e 's/return true/return false/g' app/elements/my-env-checker/my-env-checker.html
 rm -rf polymer-serve
 mkdir polymer-serve
 cp -R bower_components/ polymer-serve/

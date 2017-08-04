@@ -6,6 +6,7 @@ bower_components
 .db/
 package-lock.json
 polymer-serve
+polymer-serve/file
 bin
 lib
 include
