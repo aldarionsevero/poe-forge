@@ -3,7 +3,7 @@ from eve.auth import BasicAuth
 import requests
 import pymongo
 from dotenv import load_dotenv, find_dotenv
-from os import environ
+from os import environ, path
 load_dotenv(find_dotenv())
 
 client = pymongo.MongoClient(
@@ -58,5 +58,6 @@ class MyBasicAuth(BasicAuth):
 app = Eve(auth=MyBasicAuth)
 
 if __name__ == '__main__':
-    #updatedb()
+    if not path.exists(".db/mongo"):
+        updatedb()
     app.run()
