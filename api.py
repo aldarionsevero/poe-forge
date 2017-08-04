@@ -21,8 +21,8 @@ endpoints = ['stashes', 'items']
 
 for i in endpoints:
 
-if i not in db.collection_names():
-    db.create_collection(i)
+    if i not in db.collection_names():
+        db.create_collection(i)
 
 stash_collection = db['stashes']
 item_collection = db['items']
@@ -56,7 +56,7 @@ class MyBasicAuth(BasicAuth):
                    method):
         return username == environ.get("MONGO_USER") and password == environ.get("MONGO_PASS")
 
-app = Eve(auth=MyBasicAuth)
+app = Eve()
 
 if __name__ == '__main__':
     # updatedb()

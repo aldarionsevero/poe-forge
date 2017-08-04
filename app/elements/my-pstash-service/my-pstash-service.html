@@ -11,7 +11,7 @@
 
     <iron-ajax
       id="requestTrades"
-      url="http://api.pathofexile.com/public-stash-tabs"
+      url="http://127.0.0.1:5000/stashes"
       handle-as="json"
       on-response="handleResponse">
     </iron-ajax>
@@ -30,7 +30,7 @@
        this.$.requestTrades.generateRequest();
      },
      handleResponse: function(data) {
-       this.stashes = data.detail.response.stashes;
+       this.stashes = data.detail.response._items;
      }
    });
   </script>
