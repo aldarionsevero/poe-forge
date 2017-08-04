@@ -55,8 +55,8 @@ class MyBasicAuth(BasicAuth):
                    method):
         return username == environ.get("MONGO_USER") and password == environ.get("MONGO_PASS")
 
-app = Eve()
+app = Eve(auth=MyBasicAuth)
 
 if __name__ == '__main__':
-    updatedb()
+    #updatedb()
     app.run()

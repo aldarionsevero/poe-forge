@@ -17,6 +17,7 @@ MONGO_PORT = int(environ.get("MONGO_PORT"))
 XML = False
 JSON = True
 X_DOMAINS = '*'
+X_HEADERS = ['Authorization','Content-type']
 
 MONGO_DBNAME = environ.get("MONGO_DBNAME")
 CACHE_EXPIRES = 10
