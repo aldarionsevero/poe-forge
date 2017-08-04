@@ -5,3 +5,8 @@ bower_components
 .publish/
 .db/
 package-lock.json
+polymer-serve
+bin
+lib
+include
+pip-selfcheck.json
